@@ -1,9 +1,9 @@
 <template>
-  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <div class="navbar-item">
         <v-btn text large class="title has-text-weight-bold is-5">
-          Ultimate G-Index
+          Skechiest
         </v-btn>
       </div>
       <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -26,6 +26,11 @@
         </div>
       </div>
       <div class="navbar-end">
+        <div class="navbar-item">
+          <v-btn text>
+            About
+          </v-btn>
+        </div>
         <div class="navbar-item">
           <v-btn>
             <v-icon>mdi-github</v-icon> Github

@@ -25,8 +25,14 @@ nav {
   background-color: #99f3bd;
 }
 
+.back-gif{
+  background-image: url("https://i.pinimg.com/originals/f4/a8/b4/f4a8b449107bfcbc785ebf766c3864b8.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .gradient-hero {
-  background-image: linear-gradient(#28df99, #99f3bd, #d2f6c5, #f6f7d4);
+  background-image: linear-gradient(#ffffff, #99f3bd, #d2f6c5, #ffffff);
 }
 
 .slide-fade-enter-active {
