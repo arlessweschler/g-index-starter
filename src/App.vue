@@ -1,13 +1,17 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+  <div id="app has-navbar-fixed-top">
+    <Navbar />
     <router-view/>
   </div>
 </template>
-
+<script>
+import Navbar from "./views/components/navbar";
+export default {
+  components: {
+    Navbar,
+  }
+}
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
