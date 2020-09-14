@@ -4,7 +4,7 @@ node_js:
 cache: npm
 branches:
   only:
-  - master
+  - dev
 cache: npm
 script:
   - npm run build
@@ -19,4 +19,4 @@ deploy:
   github-token: $GITHUB_TOKEN
   keep-history: true
   on:
-    branch: master
+    branch: dev
