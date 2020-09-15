@@ -5,7 +5,7 @@
         <div class="columns is-multiline is-centered is-vcentered">
           <div class="column is-full">
             <div class="container">
-              <h2 class="subtitle">
+              <h2 :class="ismobile ? 'title' : 'subtitle'">
                 Zyndex is the Ultimate Destination for Google Drive Index which is Easily Deployable and has More Reliable Security Which can be Trusted.
               </h2>
               <p>
@@ -37,55 +37,35 @@
           <div class="column is-half">
             <figure>
               <img src="https://media.giphy.com/media/RKprmbDQXHFVy4DFyq/giphy-downsized.gif" alt="Main Image"/>
-              <figcaption><span class="has-text-dark">Image Credits:</span> GIPHY</figcaption>
+              <figcaption class="is-small"><span class="has-text-dark">Image Credits:</span>giphy</figcaption>
             </figure>
           </div>
         </div>
       </div>
     </section>
-    <div class="container back-gif">
+    <v-container fluid class="box container back-gif">
       <div class="columns is-multiline has-text-centered is-centered is-vcentered">
         <div class="column is-half">
-          <h2 class="title">
+          <h5 class="title">
             Deploy it Right Now by Clicking the Following Button and Get Started with the Instructions.
-          </h2>
+          </h5>
           <v-btn large>
             <v-icon>mdi-check-all</v-icon> Generate Now
           </v-btn>
         </div>
       </div>
-    </div>
+    </v-container>
     <div class="container" id="scroll-target">
       <h2 class="title">Get to Know About the Project</h2>
-      <div class="columns is-multiline is-mobile is-centered">
-        <div class="column is-2">
+      <div :class="ismobile ? 'columns is-multiline is-mobile is-centered is-vcentered has-text-centered' : 'columns is-multiline is-mobile is-centered is-vcentered'">
+        <div v-for="(btn, index) in abtBtns" v-bind:key="index" :class="ismobile ? index == abtBtns.length-1 ? 'column is-full' : 'column is-half' :'column is-2' ">
           <v-btn large>
-            <v-icon>mdi-head-lightbulb-outline</v-icon> Features
-          </v-btn>
-        </div>
-        <div class="column is-2">
-          <v-btn large>
-            <v-icon>mdi-wan</v-icon> Docs
-          </v-btn>
-        </div>
-        <div class="column is-2">
-          <v-btn large>
-            <v-icon>mdi-key-chain-variant</v-icon> Pre-reqs
-          </v-btn>
-        </div>
-        <div class="column is-2">
-          <v-btn large>
-            <v-icon>mdi-google-photos</v-icon> Screenshots
-          </v-btn>
-        </div>
-        <div class="column is-2">
-          <v-btn large>
-            <v-icon>mdi-lightbulb-outline</v-icon> FAQ's
+            <v-icon>{{ btn.icon }}</v-icon> {{ btn.btnTxt }}
           </v-btn>
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container mt-3">
       <div class="content">
         <h2 class="title">
           About the project:
@@ -120,11 +100,43 @@ export default {
           subtitle: "You will get Massive theming Options to Customize",
         },
       ],
+      abtBtns: [
+        {
+          icon: "mdi-head-lightbulb-outline",
+          btnTxt: "Features",
+        },
+        {
+          icon: "mdi-wan",
+          btnTxt: "Docs",
+        },
+        {
+          icon: "mdi-key-chain-variant",
+          btnTxt: "Pre-reqs",
+        },
+        {
+          icon: "mdi-google-photos",
+          btnTxt: "Screenshots",
+        },
+        {
+          icon: "mdi-lightbulb-outline",
+          btnTxt: " FAQ's",
+        }
+      ],
       currHerosrc: {},
       herokey: 0,
     }
   },
   methods: {
+  },
+  computed: {
+    ismobile() {
+      var width = window.innerWidth > 0 ? window.innerWidth : screen.width;
+      if(width > 966){
+        return false
+      } else {
+        return true
+      }
+    },
   },
   mounted(){
     this.currHerosrc = this.heroSrc[0]
