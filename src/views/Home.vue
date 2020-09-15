@@ -46,10 +46,10 @@
     <v-container fluid class="box container back-gif">
       <div class="columns is-multiline has-text-centered is-centered is-vcentered">
         <div class="column is-half">
-          <h5 class="title">
+          <h5 :class="ismobile ? 'title' : 'subtitle'">
             Deploy it Right Now by Clicking the Following Button and Get Started with the Instructions.
           </h5>
-          <v-btn large>
+          <v-btn>
             <v-icon>mdi-check-all</v-icon> Generate Now
           </v-btn>
         </div>
@@ -115,7 +115,7 @@ export default {
         },
         {
           icon: "mdi-google-photos",
-          btnTxt: "Screenshots",
+          btnTxt: "Shots",
         },
         {
           icon: "mdi-lightbulb-outline",
