@@ -35,6 +35,11 @@ nav {
   background-image: linear-gradient(#ffffff, #99f3bd, #d2f6c5, #ffffff);
 }
 
+.is-maximum{
+  width: 100%;
+  height: 100%;
+}
+
 .slide-fade-enter-active {
   transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
