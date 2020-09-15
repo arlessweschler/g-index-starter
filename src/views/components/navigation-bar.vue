@@ -10,7 +10,7 @@
         </v-list-item-content>
       </v-list-item>
       <v-list dense>
-        <v-list-item v-for="(item, index) in list" v-bind:key="index" @click="getItem">
+        <v-list-item v-for="(item, index) in list" v-bind:key="index" @click="$router.push(item.link)">
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
@@ -28,8 +28,14 @@ export default {
       drawer: false,
       list: [
         {
+          icon: "mdi-home",
+          text: "Home",
+          link: "/",
+        },
+        {
           icon: "mdi-lead-pencil",
-          text: "Generate"
+          text: "Generate",
+          link: "/generate",
         },
         {
           icon: "mdi-text-box-multiple-outline",

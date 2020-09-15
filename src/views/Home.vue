@@ -49,7 +49,7 @@
           <h5 :class="ismobile ? 'title' : 'subtitle'">
             Deploy it Right Now by Clicking the Following Button and Get Started with the Instructions.
           </h5>
-          <v-btn>
+          <v-btn @click="$router.push('/generate')">
             <v-icon>mdi-check-all</v-icon> Generate Now
           </v-btn>
         </div>
