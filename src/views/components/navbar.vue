@@ -3,7 +3,7 @@
     <div class="navbar-brand">
       <div class="navbar-item">
         <v-btn text large class="title has-text-weight-bold is-5">
-          Skechiest
+          Zyndex
         </v-btn>
       </div>
       <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">

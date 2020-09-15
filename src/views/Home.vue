@@ -6,7 +6,7 @@
           <div class="column is-full">
             <div class="container">
               <h2 class="subtitle">
-                Skechiest is the Ultimate Destination for Google Drive Index which is Easily Deployable and has More Reliable Security Which can be Trusted.
+                Zyndex is the Ultimate Destination for Google Drive Index which is Easily Deployable and has More Reliable Security Which can be Trusted.
               </h2>
               <p>
                 <v-btn medium href="#scroll-target">
@@ -91,7 +91,7 @@
           About the project:
         </h2>
         <p>
-          Skechiest is a Google Drive Index Combining the power of Cloudflare Workers and Google Drive which allows you to index your files on the browser through Cloudflare Workers. Skechiest Gives you Unmatched Amount of Customizations that no One Can Give. With Security as the Main Focus, This Gives You Every Thing You need to Manage Users. Complete Role Based Authentication and Authorization. Tokenized Download Links & Secured Playback can be one of the Prominent Features of this Index.
+          Zyndex is a Google Drive Index Combining the power of Cloudflare Workers and Google Drive which allows you to index your files on the browser through Cloudflare Workers. Zyndex Gives you Unmatched Amount of Customizations that no One Can Give. With Security as the Main Focus, This Gives You Every Thing You need to Manage Users. Complete Role Based Authentication and Authorization. Tokenized Download Links & Secured Playback can be one of the Prominent Features of this Index.
         </p>
       </div>
     </div>
@@ -104,7 +104,7 @@ export default {
     return {
       heroSrc: [
         {
-          title: "Skechiest",
+          title: "Zyndex",
           subtitle: "Designed for Style! Engineered to Last!",
         },
         {
