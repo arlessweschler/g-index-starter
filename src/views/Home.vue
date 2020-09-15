@@ -5,11 +5,11 @@
         <div class="columns is-multiline is-centered is-vcentered">
           <div class="column is-full">
             <div class="container">
-              <h2 :class="ismobile ? 'title' : 'subtitle'">
+              <h4 :class="ismobile ? 'title' : 'subtitle'">
                 Zyndex is the Ultimate Destination for Google Drive Index which is Easily Deployable and has More Reliable Security Which can be Trusted.
-              </h2>
+              </h4>
               <p>
-                <v-btn medium href="#scroll-target">
+                <v-btn @click="$vuetify.goTo('#scroll-target')">
                   <v-icon>mdi-book-open-outline</v-icon>
                   Read More
                 </v-btn>
@@ -59,7 +59,7 @@
       <h2 class="title">Get to Know About the Project</h2>
       <div :class="ismobile ? 'columns is-multiline is-mobile is-centered is-vcentered has-text-centered' : 'columns is-multiline is-mobile is-centered is-vcentered'">
         <div v-for="(btn, index) in abtBtns" v-bind:key="index" :class="ismobile ? index == abtBtns.length-1 ? 'column is-full' : 'column is-half' :'column is-2' ">
-          <v-btn large>
+          <v-btn >
             <v-icon>{{ btn.icon }}</v-icon> {{ btn.btnTxt }}
           </v-btn>
         </div>
