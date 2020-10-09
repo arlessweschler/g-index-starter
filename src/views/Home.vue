@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div>
     <section class="hero is-small">
       <div class="hero-body">
         <div class="columns is-multiline is-centered is-vcentered">
@@ -53,20 +53,26 @@
         </div>
       </div>
     </section>
-    <v-container fluid class="box container back-gif">
-      <div
-        class="columns is-multiline has-text-centered is-centered is-vcentered"
-      >
-        <div class="column is-half">
-          <h5 :class="ismobile ? 'title' : 'subtitle'">
-            Deploy it Right Now by Clicking the Following Button and Get Started
-            with the Instructions.
-          </h5>
-          <v-btn @click="$router.push('/generate')">
-            <v-icon>mdi-check-all</v-icon> Generate Now
-          </v-btn>
-        </div>
-      </div>
+    <v-container>
+      <v-card elevation="10" height="250" class="back-gif">
+        <v-row cols="12" align="center" justify="center">
+          <v-col cols="12" justify="center">
+            <v-row>
+              <v-col cols="12" align="center" justify="center">
+                <div :class="ismobile ? 'title' : 'subtitle'">
+                  Deploy it Right Now by Clicking the Following Button and Get
+                  Started with the Instructions.
+                </div>
+              </v-col>
+              <v-col cols="12" align="center" justify="center">
+                <v-btn @click="$router.push('/generate')">
+                  <v-icon>mdi-check-all</v-icon> Generate Now
+                </v-btn>
+              </v-col>
+            </v-row>
+          </v-col>
+        </v-row>
+      </v-card>
     </v-container>
     <div class="container" id="scroll-target">
       <h2 class="title">Get to Know About the Project</h2>
@@ -94,7 +100,7 @@
         </div>
       </div>
     </div>
-    <div class="container mt-3">
+    <v-container class="container mt-3">
       <div class="content">
         <h2 class="title">About the project:</h2>
         <p>
@@ -107,11 +113,11 @@
           & Secured Playback can be one of the Prominent Features of this Index.
         </p>
       </div>
-    </div>
+    </v-container>
   </div>
 </template>
 <script>
-import { shuffle } from 'lodash'
+import { shuffle } from 'lodash';
 export default {
   data: function () {
     return {
@@ -157,30 +163,30 @@ export default {
       ],
       currHerosrc: {},
       herokey: 0,
-    }
+    };
   },
   methods: {},
   computed: {
     ismobile() {
-      var width = window.innerWidth > 0 ? window.innerWidth : screen.width
+      var width = window.innerWidth > 0 ? window.innerWidth : screen.width;
       if (width > 966) {
-        return false
+        return false;
       } else {
-        return true
+        return true;
       }
     },
   },
   mounted() {
-    this.currHerosrc = this.heroSrc[0]
-    var shuffled = shuffle(this.heroSrc)
+    this.currHerosrc = this.heroSrc[0];
+    var shuffled = shuffle(this.heroSrc);
     setInterval(() => {
-      this.currHerosrc = shuffled[this.herokey]
+      this.currHerosrc = shuffled[this.herokey];
       if (this.herokey == shuffled.length - 1) {
-        this.herokey = 0
+        this.herokey = 0;
       } else {
-        this.herokey++
+        this.herokey++;
       }
-    }, 7500)
+    }, 7500);
   },
-}
+};
 </script>

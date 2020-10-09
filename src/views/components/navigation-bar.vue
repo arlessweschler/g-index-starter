@@ -48,21 +48,21 @@ export default {
           text: 'About',
         },
       ],
-    }
+    };
   },
   methods: {
     getItem() {
-      console.log('pressed')
+      console.log('pressed');
     },
   },
   mounted() {
     this.$bus.$on('nav', () => {
       if (this.$state.navdraw) {
-        this.drawer = true
+        this.drawer = true;
       } else {
-        this.drawer = false
+        this.drawer = false;
       }
-    })
+    });
   },
-}
+};
 </script>
